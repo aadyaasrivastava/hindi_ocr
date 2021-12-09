@@ -32,4 +32,4 @@ def get_text(image):
         coo.append([(x_min, y_min), (x_max, y_max)])
 
 
-    return(text,coo)
+    return(text,coo
