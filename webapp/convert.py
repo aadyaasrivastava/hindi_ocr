@@ -25,5 +25,5 @@ def converter_1(txt):
     pdf.set_font('gargi', '', 14)
     pdf.add_page()
     # pdf.set_font("Arial", size=12)
-    pdf.cell(200, 10, txt=txt, ln=1, align="C")
+    pdf.multi_cell(0, 10, txt=txt, border = 0, align="C")
     pdf.output(DOWNLOAD_FOLDER + "hindi_pdf.pdf")
