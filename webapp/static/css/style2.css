@@ -1,0 +1,94 @@
+#custom-button {
+    /*
+    padding: 10px;
+    color: white;
+    background-color:peru;
+    
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    display: inline;
+    height: 40px;
+    */
+
+    width: 200px;
+    height: 30px;
+    background-color: orange;
+    color: white;
+    border: 2px solid orange;
+    font-size: 18px;
+    font-family: sans-serif;
+    border-radius: 5px;
+}
+
+#custom-button:hover{
+    
+    background-color: transparent;
+    color: orangered;
+}
+
+#custom-text{
+    margin-left: 10px;
+    font-family: sans-serif
+    ;
+    color: #aaa;
+}
+
+
+.section{
+    display: inline;
+}
+
+
+/*
+.button_1{
+    text-align: center;
+    display: inline-block;
+    float: right;
+    width: 250px;
+    height: 60px;
+    background-color: orange;
+    color: white;
+    border: 2px solid orange;
+    font-size: 18px;
+    font-family: sans-serif;
+    border-radius: 5px;
+    justify-content: center;
+    align-content: center;
+    margin: 20px;
+
+}*/
+
+.button_2{
+    text-align: center;
+    display: inline;
+    float: right;
+    width: 245px;
+    height: 50px;
+    background-color: orange;
+    color: white;
+    border: 5px solid orange;
+    font-size: 18px;
+    font-family: sans-serif;
+    border-radius: 10px;
+    justify-content: center;
+    align-content: center;
+    margin: 20px;
+}
+
+.button_1 {
+    text-align: center;
+    display: inline;
+    float: right;
+    width: 245px;
+    height: 50px;
+    background-color: orange;
+    color: white;
+    border: 5px solid orange;
+    font-size: 18px;
+    font-family: sans-serif;
+    border-radius: 10px;
+    justify-content: center;
+    align-content: center;
+    margin: 20px;
+}

@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/style1.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/style2.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/style3.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/style.css')}}" type="text/css" media="all">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js "></script>
+
+    <!--- This line is just linking the bootstrap thingie in the file. The real thing starts below -->
+    <title>OC TECH </title>
+</head>
+
+<body>
+
+    
+
+    <!--NAVBAR SECTION-->
+
+    <nav class="navbar navbar-expand-lg navbar-dark linear-nav static-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="{{ url_for('static', filename='images/octch logo 2.png')}}" alt="..." height="90">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <h6>एक स्वदेशी पहल</h6>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#Home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Help">Help</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Contact">Contact</a>
+                    </li>
+                    <!--
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+                </ul>
+                </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="section" id="Home">
+        <div class="flex-container">
+
+            <div class="flex-child magenta">
+                <b>INTRODUCTION</b>
+                <br>Firstly, we will be developing an application – ‘Octech’, in that first we capture an image through
+                phone’s
+                camera or upload it manually and then enhance it with the help of DIP and then convert it to ASCII
+                Characters
+                and in last will get a pdf of converted document.
+                Papers get destroyed after a certain period of time, in order to prevent that we may make copy that but
+                there will be loss of paper, so to prevent that we have come through this idea.
+                <br>
+                How does an OCR API work?
+                <br>
+                OCR APIs scan and analyze the framework of document images and breaks down the page into blocks of
+                tables or
+                text lines. These lines are then subdivided into words and eventually into characters.
+
+
+                Once the OCR tool singles out individual characters, it analyzes them against a set of pattern images.
+                The
+                program then formulates a series of hypotheses to figure out the nature of the symbol.
+
+            </div>
+
+            <div class="flex-child green">
+                <form action="/get_text_from_ocr" name="get_text" method="post" enctype = "multipart/form-data">
+
+                    <div class="btn">
+                        <div class="btn_one">
+                            <!--
+                            <input type="file" id="real-file" hidden="hidden" />
+                            <button type="button" id="custom-button">Choose a file</button>
+                            <span id="custom-text"></span>-->
+                            <input type="file" name = 'image' required>
+                        
+                        </div>
+                        <br>
+                        <div class="btn_three">
+                            <button type="submit">Upload</button></a>
+                        
+                        </div>
+
+                        <br><br>
+                        <!--
+                        <div class="btn_two">
+                        <a href ="Download/Todo list with jquery/index.html"  download="ocr-text">
+                        <button>    Download Now</button></a>
+                        
+
+                        </div>
+                    -->
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+    </section>
+
+    <br>
+    <br>
+
+    <!--
+    
+        <div class="container">
+            <div class="d-grid gap-2 d-md-block text-center">
+                <div class="col-sm-4">
+                    <p>
+                        <br>
+                        INSTRUCTIONS:
+                        How optical character recognition works-
+                        Optical character recognition (OCR) lets you turn scanned images into text so you can turn
+                        paper-based documents into editable, searchable, digital documents. This can help reduce the
+                        amount of physical space required to store documents and can dramatically improve workflows
+                        involving those documents. It reduces the risk of lost or misfiled documents and, in many cases,
+                        it eliminates the need to manually process documents or rekey information, which can result in
+                        errors. And it can reduce the costs of manual handling.
+
+                        How does it work?
+                        OCR analyses the patterns of light and dark that make up the letters and numbers to turn the
+                        scanned image into text. OCR systems need to recognise characters in various fonts, so rules are
+                        applied to help the system match what it sees in the picture to the right letters or numbers.
+
+                        While early OCR systems were designed to work with one specific font, which was specially
+                        created for the purpose, some modern OCR systems can even recognise people’s handwriting. This
+                        technology is called intelligent character recognition (ICR).
+
+                        For OCR to work optimally, it’s important that you scan the clearest possible version of the
+                        document. Blurred text or marks on the copy can create errors.
+
+                        OCR programs recognise the text character by character but the outcome is so fast as to be
+                        instantaneous. You can check for errors as you go or at the end of the process, and some
+                        programs have automatic error detection.
+                    -->
+                        <hr>
+
+                        <p>
+                            <section class="info" id="Help">
+
+                          <u>INSTRUCTIONS:</u><br>
+                          How optical character recognition works-
+                          Optical character recognition (OCR) lets you turn scanned images into text so you can turn
+                          paper-based documents into editable, searchable, digital documents. This can help reduce the
+                          amount of physical space required to store documents and can dramatically improve workflows
+                          involving those documents. It reduces the risk of lost or misfiled documents and, in many cases,
+                          it eliminates the need to manually process documents or rekey information, which can result in
+                          errors. And it can reduce the costs of manual handling.
+                          <br>
+                  
+                          How does it work?
+                          OCR analyses the patterns of light and dark that make up the letters and numbers to turn the
+                          scanned image into text. OCR systems need to recognise characters in various fonts, so rules are
+                          applied to help the system match what it sees in the picture to the right letters or numbers.
+                  
+                          While early OCR systems were designed to work with one specific font, which was specially
+                          created for the purpose, some modern OCR systems can even recognise people’s handwriting. This
+                          technology is called intelligent character recognition (ICR).
+                  
+                          For OCR to work optimally, it’s important that you scan the clearest possible version of the
+                          document. Blurred text or marks on the copy can create errors.
+                  
+                          OCR programs recognise the text character by character but the outcome is so fast as to be
+                          instantaneous. You can check for errors as you go or at the end of the process, and some
+                          programs have automatic error detection.
+                        </section>
+                        </p>
+
+                   
+                    <br>
+                    <br>
+
+                    <!--
+            <div class="search-box">
+                <input class ="search-text" name="" placeholder="type to search">
+                <a class="search-btn" href="#">
+                    <i class="fas fa-search"></i>
+
+                </a>
+            </div>
+
+        -->
+
+
+
+                    
+                    
+                    
+                    <br>
+                    {% if result %}
+                        <img src="data:image/png;base64,{{image64}}" class="floatRight">
+                        {% for r in text %}
+                        Result = {{r[0]}}<br>
+                        percentage = {{r[1]}}
+                        <br>
+                        {% endfor %}
+                    {% else %}
+                        <img src="{{ url_for('static', filename='images/image2-1.png')}}" height="400PX" width="400PX" class="floatRight">
+                    {% endif %}
+                    </p>
+                    <br>
+                    <br>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    <p>
+
+
+        <!--upload button try-->
+        <!-- <form class="form">
+                         <div class="file-upload-wrapper" data-text="Select ypur file!">
+                             <input name="file-upload-field" type="file" class="file-upload-field" value="">
+                         </div>
+                   </form>
+                    </p>
+              
+
+            
+
+
+             <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+             <script src="script.js"></script>
+                -->
+        <!--  imp code
+           <button class="btn btn-primary" type="button">Upload Document Image</button>
+                </p>
+          </div>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+        <div class="row">
+            <div class="col-sm-4">
+                
+                <button id="btnSearch" class="btn btn-primary btn-md center-block" style="width: 100px;"
+                onclick="btnSearch_Click">Output</button>
+            </div> 
+
+              --download button--
+              <a href=""><button>Download Now</button></a>
+
+
+        -->
+
+
+
+
+        <!--
+            <div class="col-sm-4">
+                
+                <button id="btnClear" class="btn btn-danger btn-md center-block" style="width: 100px;"
+                onclick="btnClear_Click">Download</button>
+            </div>
+        -->
+
+
+
+
+
+        <!-------------------------imp code--
+            <div class="row">
+                <div class="col-sm-4">
+                    
+                    <button id="btnSearch" class="btn btn-primary btn-md center-block" style="width: 100px;"
+                    onclick="btnSearch_Click">Search</button>
+                </div> 
+                <div class="col-sm-4">
+                    
+                    <button id="btnClear" class="btn btn-danger btn-md center-block" style="width: 100px;"
+                    onclick="btnClear_Click">Edit</button>
+                </div>
+                --->
+
+
+
+
+
+
+        <!--Main body section-->
+        <!-- <div class="container">
+        <div class="row justify-content-start">
+            <div class="col-4">
+                One of two columns
+            </div>
+            <div class="col-4">
+                One of two columns
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-4">
+                One of two columns
+            </div>
+            <div class="col-4">
+                One of two columns
+            </div>
+        </div>
+        <div class="row justify-content-end">
+            <div class="col-4">
+                One of two columns
+            </div>
+            <div class="col-4">
+                One of two columns
+            </div>
+        </div>
+        <div class="row justify-content-around">
+            <div class="col-4">
+                One of two columns
+            </div>
+            <div class="col-4">
+                One of two columns
+            </div>
+        </div>
+        <div class="row justify-content-between">
+            <div class="col-4">
+                One of two columns
+            </div>
+            <div class="col-4">
+                One of two columns
+            </div>
+        </div>
+        <div class="row justify-content-evenly">
+            <div class="col-4">
+                One of two columns
+            </div>
+            <div class="col-4">
+                One of two columns
+            </div>
+        </div>
+    </div> -->
+
+
+
+
+
+
+
+
+      <br>
+      <br>
+
+     
+      <!--
+
+        <!--FOOTER SECTION-
+    <section class="Contact" id="Contact">
+
+        <footer class="footer-distributed">
+
+            <div class="footer-left">
+
+                <!-- <h3>Company<span>logo</span></h3> -
+                <h3> <img src="octch logo 2.png" alt="..." height="160" width="170"></h3>
+                <p class="footer-links">
+                    <a href="#">Home</a> ·
+                    <a href="#">Blog</a> ·
+                    <a href="#">Pricing</a> ·
+                    <a href="#">About</a> ·
+                    <a href="#">Faq</a> ·
+                    <a href="#">Contact</a>
+                </p>
+
+                <p class="footer-company-name">Company Name © 2021</p>
+
+                <div class="footer-icons">
+
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                    <a href="#"><i class="fa fa-github"></i></a>
+
+                </div>
+
+            </div>
+
+            <div class="footer-right">
+
+                <p>Contact Us</p>
+
+                <form action="mail.php" method="post">
+
+                    <input type="text" name="email" placeholder="Email">
+                    <textarea name="message" placeholder="Message"></textarea>
+                    <button>Send</button>
+
+                </form>
+
+            </div>
+         
+        -->
+
+        <!---export section-->
+
+
+        <br>
+        <br>
+        
+            <div class="button_1">
+                <form action = "http://localhost:5000/downloader/pdf" method = "POST"
+                enctype = "multipart/form-data" >
+                <input type=submit value= Export-PDF>
+                </form>
+            
+            
+            </div>
+            <br>
+            <br>
+          
+            <div class="button_2">
+                <form action = "http://localhost:5000/downloader/document" method = "POST"
+                enctype = "multipart/form-data" >
+                <input type=submit value=Export-Document >
+                </form>
+            
+            
+            </div>
+
+
+         <br>
+         <br>
+         
+
+
+
+
+        <!--FOOTER SECTION-->
+
+
+        <section class="Contact" id="Contact">
+        
+            <footer class="footer-distributed">
+
+                <div class="footer-left">
+                  
+                    
+                    <!-- <h3>Company<span>logo</span></h3> -->
+                    <h3> <img src="{{ url_for('static', filename='images/octch logo 2.png')}}" alt="..." height="160" width="170"></h3>
+                    
+
+                    <p class="footer-company-name">OC-TECH © 2021</p>
+
+                    
+                </div>
+                
+                <div class="footer-right">
+                    
+                    <p>Contact Us</p>
+
+                    <form action="mail.php" method="post">
+
+                        <input type="text" name="email" placeholder="Email">
+                        <textarea name="message" placeholder="Message"></textarea>
+                        <button>Send</button>
+
+                    </form>
+                     
+                </div>
+
+            </footer>
+        </section>
+
+        </footer> 
+        
+    </section>
+    <script src="{{ url_for('static', filename='JavaScript/script.js')}}"></script>
+</body>
+
+</html>
