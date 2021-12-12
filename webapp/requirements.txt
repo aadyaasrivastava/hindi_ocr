@@ -26,3 +26,7 @@ torchvision==0.11.1
 typing_extensions==4.0.1
 Werkzeug==2.0.2
 zipp==3.6.0
+fpdf==1.7.2
+convert==0.1.2
+python-docx==0.8.11
+gtts==2.2.3
