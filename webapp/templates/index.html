@@ -18,7 +18,7 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js "></script>
 
     <!--- This line is just linking the bootstrap thingie in the file. The real thing starts below -->
-    <title>OC TECH </title>
+    <title>OCTECH </title>
 </head>
 
 <body>
@@ -82,16 +82,7 @@
                 Papers get destroyed after a certain period of time, in order to prevent that we may make copy that but
                 there will be loss of paper, so to prevent that we have come through this idea.
                 <br>
-                How does an OCR API work?
-                <br>
-                OCR APIs scan and analyze the framework of document images and breaks down the page into blocks of
-                tables or
-                text lines. These lines are then subdivided into words and eventually into characters.
-
-
-                Once the OCR tool singles out individual characters, it analyzes them against a set of pattern images.
-                The
-                program then formulates a series of hypotheses to figure out the nature of the symbol.
+                
 
             </div>
 
@@ -108,12 +99,13 @@
                         
                         </div>
                         <br>
+                        
                         <div class="btn_three">
                             <button type="submit">Upload</button></a>
                         
                         </div>
 
-                        <br><br>
+                        
                         <!--
                         <div class="btn_two">
                         <a href ="Download/Todo list with jquery/index.html"  download="ocr-text">
@@ -126,6 +118,50 @@
 
                 </form>
 
+                 <!---export section-->
+
+
+        <br>
+        <br>
+        
+            <div class="button_1">
+                <form action = "http://localhost:5000/downloader/pdf" method = "POST"
+                enctype = "multipart/form-data" >
+                <div class="btn_three">
+                    <button type="submit">export pdf</button></a>
+                
+                </div>
+                </form>
+            
+            
+            </div>
+            
+            
+          
+            <div class="button_2">
+                <form action = "http://localhost:5000/downloader/doc" method = "POST"
+                enctype = "multipart/form-data" >
+                <div class="btn_three">
+                    <button type="submit">export doc</button></a>
+                
+                </div>
+                </form>
+            
+            
+            </div>
+
+            <audio
+            controls
+            src="{{ url_for('static', filename='audio/hindi_audio.mp3') }}">
+                Your browser does not support the
+                <code>audio</code> element.
+    </audio>
+
+
+         <br>
+         <br>
+         
+
             </div>
 
         </div>
@@ -134,86 +170,7 @@
     <br>
     <br>
 
-    <!--
     
-        <div class="container">
-            <div class="d-grid gap-2 d-md-block text-center">
-                <div class="col-sm-4">
-                    <p>
-                        <br>
-                        INSTRUCTIONS:
-                        How optical character recognition works-
-                        Optical character recognition (OCR) lets you turn scanned images into text so you can turn
-                        paper-based documents into editable, searchable, digital documents. This can help reduce the
-                        amount of physical space required to store documents and can dramatically improve workflows
-                        involving those documents. It reduces the risk of lost or misfiled documents and, in many cases,
-                        it eliminates the need to manually process documents or rekey information, which can result in
-                        errors. And it can reduce the costs of manual handling.
-
-                        How does it work?
-                        OCR analyses the patterns of light and dark that make up the letters and numbers to turn the
-                        scanned image into text. OCR systems need to recognise characters in various fonts, so rules are
-                        applied to help the system match what it sees in the picture to the right letters or numbers.
-
-                        While early OCR systems were designed to work with one specific font, which was specially
-                        created for the purpose, some modern OCR systems can even recognise people’s handwriting. This
-                        technology is called intelligent character recognition (ICR).
-
-                        For OCR to work optimally, it’s important that you scan the clearest possible version of the
-                        document. Blurred text or marks on the copy can create errors.
-
-                        OCR programs recognise the text character by character but the outcome is so fast as to be
-                        instantaneous. You can check for errors as you go or at the end of the process, and some
-                        programs have automatic error detection.
-                    -->
-                        <hr>
-
-                        <p>
-                            <section class="info" id="Help">
-
-                          <u>INSTRUCTIONS:</u><br>
-                          How optical character recognition works-
-                          Optical character recognition (OCR) lets you turn scanned images into text so you can turn
-                          paper-based documents into editable, searchable, digital documents. This can help reduce the
-                          amount of physical space required to store documents and can dramatically improve workflows
-                          involving those documents. It reduces the risk of lost or misfiled documents and, in many cases,
-                          it eliminates the need to manually process documents or rekey information, which can result in
-                          errors. And it can reduce the costs of manual handling.
-                          <br>
-                  
-                          How does it work?
-                          OCR analyses the patterns of light and dark that make up the letters and numbers to turn the
-                          scanned image into text. OCR systems need to recognise characters in various fonts, so rules are
-                          applied to help the system match what it sees in the picture to the right letters or numbers.
-                  
-                          While early OCR systems were designed to work with one specific font, which was specially
-                          created for the purpose, some modern OCR systems can even recognise people’s handwriting. This
-                          technology is called intelligent character recognition (ICR).
-                  
-                          For OCR to work optimally, it’s important that you scan the clearest possible version of the
-                          document. Blurred text or marks on the copy can create errors.
-                  
-                          OCR programs recognise the text character by character but the outcome is so fast as to be
-                          instantaneous. You can check for errors as you go or at the end of the process, and some
-                          programs have automatic error detection.
-                        </section>
-                        </p>
-
-                   
-                    <br>
-                    <br>
-
-                    <!--
-            <div class="search-box">
-                <input class ="search-text" name="" placeholder="type to search">
-                <a class="search-btn" href="#">
-                    <i class="fas fa-search"></i>
-
-                </a>
-            </div>
-
-        -->
-
 
 
                     
@@ -378,8 +335,8 @@
 
 
 
-      <br>
-      <br>
+      
+      
 
      
       <!--
@@ -431,44 +388,45 @@
          
         -->
 
-        <!---export section-->
+       
 
 
-        <br>
-        <br>
-        
-            <div class="button_1">
-                <form action = "http://localhost:5000/downloader/pdf" method = "POST"
-                enctype = "multipart/form-data" >
-                <div class="btn_three">
-                    <button type="submit">export pdf</button></a>
-                
-                </div>
-                </form>
-            
-            
-            </div>
-            <br>
-            <br>
-          
-            <div class="button_2">
-                <form action = "http://localhost:5000/downloader/doc" method = "POST"
-                enctype = "multipart/form-data" >
-                <div class="btn_three">
-                    <button type="submit">export doc</button></a>
-                
-                </div>
-                </form>
-            
-            
-            </div>
-
-
-         <br>
-         <br>
          
+                  <!--
+         <p>
+             <section class="info" id="Help">
 
+           <u>INSTRUCTIONS:</u><br>
+           How optical character recognition works-
+           Optical character recognition (OCR) lets you turn scanned images into text so you can turn
+           paper-based documents into editable, searchable, digital documents. This can help reduce the
+           amount of physical space required to store documents and can dramatically improve workflows
+           involving those documents. It reduces the risk of lost or misfiled documents and, in many cases,
+           it eliminates the need to manually process documents or rekey information, which can result in
+           errors. And it can reduce the costs of manual handling.
+           <br>
+   
+           How does it work?
+           OCR analyses the patterns of light and dark that make up the letters and numbers to turn the
+           scanned image into text. OCR systems need to recognise characters in various fonts, so rules are
+           applied to help the system match what it sees in the picture to the right letters or numbers.
+   
+           While early OCR systems were designed to work with one specific font, which was specially
+           created for the purpose, some modern OCR systems can even recognise people’s handwriting. This
+           technology is called intelligent character recognition (ICR).
+   
+           For OCR to work optimally, it’s important that you scan the clearest possible version of the
+           document. Blurred text or marks on the copy can create errors.
+   
+           OCR programs recognise the text character by character but the outcome is so fast as to be
+           instantaneous. You can check for errors as you go or at the end of the process, and some
+           programs have automatic error detection.
+         </section>
+         </p>-->
 
+    
+     
+     
 
 
         <!--FOOTER SECTION-->
