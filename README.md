@@ -17,6 +17,7 @@ Additionally, a robust Hindi OCR system would facilitate language inclusion and 
   <li> Flask
   <li> Open CV
   <li> NumPy
+  </h6>
 
 <h3> How to run Hindi OCR?
 <h6> * To Run Hindi OCR on your system you are required to Download the entire repo into their local machine and extract it.<br> 
