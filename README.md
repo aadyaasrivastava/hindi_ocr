@@ -17,6 +17,9 @@ Additionally, a robust Hindi OCR system would facilitate language inclusion and 
   <li> Flask
   <li> Open CV
   <li> NumPy
+  <li> HTML
+  <li> CSS
+  <li> Js
   </h6>
 
 <h3> How to run Hindi OCR?
